@@ -1,0 +1,24 @@
+<view class="intro">
+    <image class="question-bj" src="../../image/bj1.jpg"/>
+    <!-- <view class="header-wap"></view> -->
+    <view class="index-content">
+        <view class="index-header">{{activeIndex + 1}} / 12</view>
+        <view tt:for="{{infoItem}}" tt:key="*this" tt:if="{{activeIndex == index}}">
+            <view class="index-quesion">
+                {{item.question}}
+            </view>
+            <view class="index-answer">
+                <text 
+                    tt:for="{{item.answer}}" 
+                    tt:for-item="childItem"
+                    tt:for-index="childIndex"
+                    class="{{answerArr[index] == childIndex ? 'index-answer-active' : ''}} index-answer-text" 
+                    tt:key="*this"
+                    bindtap="handleChildClick"
+                    data-prentindex="{{index}}"
+                    data-index="{{childIndex}}">{{childItem}}</text>            
+            </view>
+        </view>
+        <view tt:if="{{isShowSubmit}}" bindtap="handleSubmit" class="index-submit">提交</view>
+    </view>
+</view>

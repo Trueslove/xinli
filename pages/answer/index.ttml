@@ -1,0 +1,3 @@
+<view >
+    <image class="answer-img" src="../../image/answer/{{answer}}.png"/>
+</view>

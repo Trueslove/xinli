@@ -1,0 +1,14 @@
+.index-submit {
+  width: 90%;
+  margin: 50px auto;
+  height: 50px;
+  line-height: 50px;
+  background: chocolate;
+  border-radius: 4px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+}
+.index {
+  background: url("../../image/bj.jpg");
+}
